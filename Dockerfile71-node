@@ -2,4 +2,4 @@ FROM php:7.1
 
 ADD ./scripts /scripts
 RUN /scripts/php_install.sh
-RUN /scripts/yarn_install.sh
+RUN /scripts/node_install.sh
