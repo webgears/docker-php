@@ -9,6 +9,7 @@ set -xe
 apt-get update -yqq
 apt-get install git -yqq
 apt-get install zip unzip zlib1g-dev -yqq
+apt-get install apt-transport-https -yqq
 
 # Install composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
