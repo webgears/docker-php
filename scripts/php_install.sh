@@ -11,7 +11,10 @@ apt-get install apt-utils -yqq
 apt-get install git zip unzip zlib1g-dev libzip-dev wget libxml2-dev libpq-dev  -yqq
 
 # Install composer
-curl --silent --show-error https://getcomposer.org/installer | php
+cd ~
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+rm composer-setup.php
 
 # Install mysql driver
 # Here you can install any other extension that you need
