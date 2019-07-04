@@ -3,3 +3,4 @@ FROM php:7.2-stretch
 ADD ./scripts /scripts 
 RUN /scripts/php_install.sh
 RUN /scripts/node_install.sh
+RUN apt-get clean

@@ -1,5 +1,6 @@
-FROM php:7.1
+FROM php:7.1-stretch
 
 ADD ./scripts /scripts
 RUN /scripts/php_install.sh
 RUN /scripts/node_install.sh
+RUN apt-get clean
