@@ -20,4 +20,4 @@ curl --silent --show-error https://getcomposer.org/installer | php -- --install-
 
 # Install mysql driver
 # Here you can install any other extension that you need
-docker-php-ext-install pdo_mysql pgsql intl zip
+docker-php-ext-install pdo_mysql pgsql intl zip pcntl
