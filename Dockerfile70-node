@@ -1,4 +1,4 @@
-FROM php:7-stretch
+FROM php:7.0-stretch
 
 ADD ./scripts /scripts 
 RUN /scripts/php_install.sh
