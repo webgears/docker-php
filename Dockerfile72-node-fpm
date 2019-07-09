@@ -1,0 +1,14 @@
+FROM php:7.2-fpm-stretch
+
+ADD ./scripts /scripts 
+RUN /scripts/php_install.sh
+RUN /scripts/node_install.sh
+RUN apt-get clean
+
+RUN apt install ssl-cert apache2 -yqq
+COPY ./apache/default.conf /etc/apache2/sites-available/default.conf
+COPY ./apache/php_fpm.conf /etc/apache2/conf-available/php_fpm.conf
+RUN a2ensite default
+RUN a2dissite 000-default
+RUN a2enmod ssl rewrite actions  proxy_fcgi setenvif alias
+RUN a2enconf php_fpm
