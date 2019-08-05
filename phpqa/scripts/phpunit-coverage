@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "PHPunit files already exists. Processing report...";
+cp -R test/coverage test/phpqa/coverage

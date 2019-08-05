@@ -18,6 +18,9 @@ mkdir -p ~/.ssh && ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts && ssh-ke
 # Install composer
 curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# Install fast composer package downloader
+composer global require hirak/prestissimo
+
 # Install PCOV code coverage library
 pecl install pcov
 docker-php-ext-enable pcov

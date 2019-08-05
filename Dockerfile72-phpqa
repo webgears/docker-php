@@ -1,0 +1,12 @@
+FROM php:7.2-stretch
+
+ADD ./scripts /scripts 
+RUN /scripts/php_install.sh
+RUN /scripts/node_install.sh
+RUN apt-get clean
+ADD ./phpqa /phpqa
+WORKDIR /phpqa
+RUN composer install
+RUN ln -sr ./script/phpunit-coverage vendor/bin/phpunit-coverage
+RUN ln -sr ./script/phpunit-result vendor/bin/phpunit-result
+CMD /phpqa/vendor/bin/phpqa
