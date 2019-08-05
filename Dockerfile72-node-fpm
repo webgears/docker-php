@@ -6,6 +6,8 @@ RUN /scripts/node_install.sh
 
 RUN apt install ssl-cert apache2 -yqq
 RUN apt-get clean
+RUN printf "\n" | pecl install apcu
+RUN docker-php-ext-enable apcu
 COPY ./apache/default.conf /etc/apache2/sites-available/default.conf
 COPY ./apache/php_fpm.conf /etc/apache2/conf-available/php_fpm.conf
 RUN sed -i 's|;access.format.*|access.format="%t \"%m %r%{REQUEST_URI}e\""|' /usr/local/etc/php-fpm.d/www.conf
