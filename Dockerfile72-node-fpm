@@ -1,10 +1,11 @@
 FROM php:7.2-fpm-stretch
 
 ADD ./scripts /scripts 
+ADD ./bin/slack /usr/local/bin
 RUN /scripts/php_install.sh
 RUN /scripts/node_install.sh
-
 RUN apt install ssl-cert apache2 -yqq
+RUN apt-get install jq -yqq
 RUN apt-get clean
 RUN printf "\n" | pecl install apcu
 RUN docker-php-ext-enable apcu
@@ -15,3 +16,4 @@ RUN a2ensite default
 RUN a2dissite 000-default
 RUN a2enmod ssl rewrite actions proxy_fcgi setenvif alias
 RUN a2enconf php_fpm
+
