@@ -2,10 +2,18 @@
 
 https://hub.docker.com/r/wbgrs/php/
 
-Docker Image for PHP 7.0 based on the [official php repository](https://hub.docker.com/_/php/), but comes with additional libraries and tools:
+Docker Image for PHP >= 7.0 based on the [official php repository](https://hub.docker.com/_/php/), but comes with additional libraries and tools:
 
-- PHP Version 7.0
+- PHP Version >= 7.0
 - Composer
 - git
 - pdo_mysql
 - zip
+- jq
+- [slack-cli](https://github.com/rockymadden/slack-cli)
+
+Other images also include
+
+- node
+- phpqa
+- fpm
