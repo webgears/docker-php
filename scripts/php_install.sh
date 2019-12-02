@@ -27,4 +27,4 @@ docker-php-ext-enable pcov
 
 # Install mysql driver
 # Here you can install any other extension that you need
-docker-php-ext-install pdo_mysql pgsql intl zip xsl
+docker-php-ext-install pdo_mysql pgsql intl zip xsl sysvsem calendar

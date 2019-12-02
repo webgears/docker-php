@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0734aaba4f30b1c0ec6558a097433ae1",
+    "content-hash": "7c204182b10b8d3f7bbf56c1a4712f20",
     "packages": [
         {
             "name": "amphp/amp",
@@ -2462,6 +2462,73 @@
                 "php"
             ],
             "time": "2019-05-25T20:07:01+00:00"
+        },
+        {
+            "name": "nimut/phpunit-merger",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nimut/phpunit-merger.git",
+                "reference": "29fc33a1707e1a574e6bc65465d3ad803b803626"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nimut/phpunit-merger/zipball/29fc33a1707e1a574e6bc65465d3ad803b803626",
+                "reference": "29fc33a1707e1a574e6bc65465d3ad803b803626",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-json": "*",
+                "ext-simplexml": "*",
+                "php": ">=7.0.8 < 7.4",
+                "phpunit/php-code-coverage": "^5.0 || ^6.0 || ^7.0",
+                "symfony/console": "^3.0 || ^4.0",
+                "symfony/finder": "^3.0 || ^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0 || ^7.0 || ^8.0",
+                "symfony/filesystem": "^3.4"
+            },
+            "suggest": {
+                "friendsofphp/php-cs-fixer": "Tool to automatically fix PHP coding standards issues"
+            },
+            "bin": [
+                "bin/phpunit-merger"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nimut\\PhpunitMerger\\": "src/PhpunitMerger/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Helmut Hummel",
+                    "email": "info@helhum.io",
+                    "homepage": "https://helhum.io",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Nicole Cordes",
+                    "email": "typo3@cordes.co",
+                    "homepage": "https://www.biz-design.biz",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Merge multiple PHPUnit reports into one file",
+            "homepage": "https://github.com/Nimut/phpunit-merger",
+            "keywords": [
+                "TYPO3 CMS",
+                "coverage",
+                "phpunit",
+                "sonarqube"
+            ],
+            "time": "2019-05-15T18:22:26+00:00"
         },
         {
             "name": "ocramius/package-versions",
