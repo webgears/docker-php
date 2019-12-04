@@ -14,7 +14,7 @@ class PHPUnitJUnit extends \Edge\QA\Tools\Tool implements ToolDefinition
 {
     public static $SETTINGS = array(
         'optionSeparator' => '=',
-        'xml' => ['../test/phpunit.xml'],
+        'xml' => ['../phpunit.xml'],
         'errorsXPath' => '//testsuites/testsuite/testsuite/testcase/error',
         'composer' => 'phpunit/phpunit',
         'internalClass' => ['PHPUnit_Framework_TestCase', 'PHPUnit\Framework\TestCase'],
