@@ -1,0 +1,4 @@
+#/bin/bash
+PWD=`pwd`
+PROJECT_NAME=`basename "$PWD"`
+docker run -a stdin -a stdout -i -t -v $PWD:/builds/webgears-gmbh/$PROJECT_NAME -w /builds/webgears-gmbh/$PROJECT_NAME wbgrs/php:7.2-phpqa /phpqa/vendor/bin/phpqa "$@"
