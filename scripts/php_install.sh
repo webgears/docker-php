@@ -28,3 +28,8 @@ docker-php-ext-enable pcov
 docker-php-ext-configure gd --with-png-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-webp-dir=/usr/include
 
 docker-php-ext-install pdo_mysql pgsql intl zip xsl sysvsem calendar gd
+
+# Install Deployer (https://deployer.org/)
+curl -LO https://deployer.org/deployer.phar
+mv deployer.phar /usr/local/bin/dep
+chmod +x /usr/local/bin/dep
