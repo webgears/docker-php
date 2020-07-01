@@ -9,6 +9,7 @@ docker build . -f Dockerfile72-node -t wbgrs/php:7.2-node
 docker build . -f Dockerfile72-phpqa -t wbgrs/php:7.2-phpqa
 docker build . -f Dockerfile72-node-fpm -t wbgrs/php:7.2-node-fpm
 docker build . -f Dockerfile72-node-apache -t wbgrs/php:7.2-node-apache
+docker build . -f Dockerfile74-node-fpm -t wbgrs/php:7.4-node-fpm
 
 docker push wbgrs/php:7.0
 docker push wbgrs/php:7.1
@@ -19,3 +20,4 @@ docker push wbgrs/php:7.2-node
 docker push wbgrs/php:7.2-phpqa
 docker push wbgrs/php:7.2-node-fpm
 docker push wbgrs/php:7.2-node-apache
+docker push wbgrs/php:7.4-node-fpm
