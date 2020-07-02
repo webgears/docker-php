@@ -4,5 +4,11 @@ ADD ./scripts /scripts
 ADD ./bin/slack /usr/local/bin
 RUN /scripts/php_install.sh
 RUN /scripts/node_install.sh
-RUN apt-get install jq -yqq
+RUN apt-get install jq build-essential python-dev libreadline-dev libbz2-dev libssl-dev libsqlite3-dev libffi-dev -yqq
+RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+RUN echo "export PATH=\"/root/.pyenv/bin:\$PATH\"" >> ~/.bashrc
+RUN . ~/.bashrc && pyenv install 3.7.2
+RUN git clone https://github.com/aws/aws-elastic-beanstalk-cli-setup.git
+RUN ./aws-elastic-beanstalk-cli-setup/scripts/bundled_installer
+RUN echo 'export PATH="/root/.ebcli-virtual-env/executables:$PATH"' >> ~/.bashrc
 RUN apt-get clean
