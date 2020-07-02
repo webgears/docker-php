@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-stretch
+FROM php:7.4-fpm-buster
 
 ADD ./scripts /scripts 
 ADD ./bin/slack /usr/local/bin

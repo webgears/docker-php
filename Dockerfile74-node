@@ -1,4 +1,4 @@
-FROM php:7.4-stretch
+FROM php:7.4-buster
 
 ADD ./scripts /scripts
 ADD ./bin/slack /usr/local/bin
