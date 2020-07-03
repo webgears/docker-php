@@ -2,7 +2,7 @@ FROM php:7.4-fpm-buster
 
 ADD ./scripts /scripts 
 ADD ./bin/slack /usr/local/bin
-RUN /scripts/php_install.sh
+RUN /scripts/php74_install.sh
 RUN /scripts/node_install.sh
 RUN apt install ssl-cert apache2 -yqq
 RUN apt-get install jq -yqq
