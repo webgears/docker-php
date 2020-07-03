@@ -2,6 +2,6 @@ FROM php:7.4-buster
 
 ADD ./scripts /scripts
 ADD ./bin/slack /usr/local/bin
-RUN /scripts/php_install.sh
+RUN /scripts/php74_install.sh
 RUN apt-get install jq -yqq
 RUN apt-get clean
