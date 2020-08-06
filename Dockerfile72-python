@@ -1,0 +1,12 @@
+FROM wbgrs/php:7.2-node
+
+RUN apt-get install jq build-essential python-dev libreadline-dev libbz2-dev libssl-dev libsqlite3-dev libffi-dev -yqq
+RUN curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+RUN echo "export PATH=\"/root/.pyenv/bin:\$PATH\"" >> ~/.bashrc
+RUN . ~/.bashrc && pyenv install 3.7.2
+
+ENV PATH="/root/.pyenv/versions/3.7.2/bin:$PATH"
+
+RUN pip install pipenv
+
+RUN apt-get clean

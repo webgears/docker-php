@@ -1,8 +1,4 @@
-FROM php:7.2-stretch
+FROM wbgrs/php:7.2
 
-ADD ./scripts /scripts 
-ADD ./bin/slack /usr/local/bin
-RUN /scripts/php_install.sh
 RUN /scripts/node_install.sh
-RUN apt-get install jq -yqq
-RUN apt-get clean
+
