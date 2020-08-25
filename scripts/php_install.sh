@@ -13,6 +13,9 @@ apt-get update
 apt-get install apt-utils -yqq
 apt-get install git zip unzip zlib1g-dev libzip-dev wget libxml2-dev libpq-dev openssh-client sudo libxslt1-dev libpng-dev libjpeg-dev libwebp-dev -yqq
 
+# Install autoconf and libtool to make sure javascript dependencies can compile
+apt install autoconf libtool dh-autoreconf -yqq
+
 mkdir -p ~/.ssh && ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts && ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 
 # Install composer
@@ -33,3 +36,5 @@ docker-php-ext-install pdo_mysql pgsql intl zip xsl sysvsem calendar gd
 curl -LO https://deployer.org/deployer.phar
 mv deployer.phar /usr/local/bin/dep
 chmod +x /usr/local/bin/dep
+
+

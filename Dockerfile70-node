@@ -2,4 +2,5 @@ FROM wbgrs/php:7.0
 
 RUN /scripts/node_install.sh
 
- 
+ # Install autoreconf to fix gulp-imagin issue
+RUN apt install dh-autoreconf -yqq
