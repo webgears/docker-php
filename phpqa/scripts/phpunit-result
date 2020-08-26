@@ -1,3 +1,0 @@
-#!/usr/bin/env php
-<?php
-echo "PHPunit files already exists. Processing report..." . PHP_EOL;

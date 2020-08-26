@@ -1,13 +1,14 @@
-FROM php:7.4-buster
+FROM wbgrs/php:7.4-node
 
-ADD ./scripts /scripts
-ADD ./bin/slack /usr/local/bin
-RUN /scripts/php74_install.sh
-RUN /scripts/node_install.sh
 RUN apt-get install jq libxml2-utils -yqq
 RUN apt-get clean
 RUN npm install -g diff2html-cli
-ADD ./phpqa /phpqa
+
+RUN curl https://gitlab.com/webgears-gmbh/phpqa/-/archive/master/phpqa-master.zip --output phpqa.zip
+RUN unzip phpqa.zip
+RUN mv phpqa-master /phpqa
+RUN rm phpqa.zip
+
 WORKDIR /phpqa
 RUN composer install
 RUN ln -sr ./scripts/phpunit-coverage vendor/bin/phpunit-coverage

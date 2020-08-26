@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 SKIP_BUILD=0
 DEPLOY=0
 
@@ -27,12 +29,8 @@ done
 shift $((OPTIND - 1))
 
 if ((!SKIP_BUILD)); then
-    docker build . -f Dockerfile70 -t wbgrs/php:7.0
-    docker build . -f Dockerfile71 -t wbgrs/php:7.1
     docker build . -f Dockerfile72 -t wbgrs/php:7.2
     docker build . -f Dockerfile74 -t wbgrs/php:7.4
-    docker build . -f Dockerfile70-node -t wbgrs/php:7.0-node
-    docker build . -f Dockerfile71-node -t wbgrs/php:7.1-node
     docker build . -f Dockerfile72-node -t wbgrs/php:7.2-node
     docker build . -f Dockerfile74-node -t wbgrs/php:7.4-node
     docker build . -f Dockerfile72-phpqa -t wbgrs/php:7.2-phpqa
@@ -48,12 +46,8 @@ if ((!SKIP_BUILD)); then
 fi
 
 if ((DEPLOY)); then
-    docker push wbgrs/php:7.0
-    docker push wbgrs/php:7.1
     docker push wbgrs/php:7.2
     docker push wbgrs/php:7.4
-    docker push wbgrs/php:7.0-node
-    docker push wbgrs/php:7.1-node
     docker push wbgrs/php:7.2-node
     docker push wbgrs/php:7.2-eb
     docker push wbgrs/php:7.4-node
