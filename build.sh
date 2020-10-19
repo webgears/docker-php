@@ -49,7 +49,6 @@ if ((DEPLOY)); then
     docker push wbgrs/php:7.2
     docker push wbgrs/php:7.4
     docker push wbgrs/php:7.2-node
-    docker push wbgrs/php:7.2-eb
     docker push wbgrs/php:7.4-node
     docker push wbgrs/php:7.2-phpqa
     docker push wbgrs/php:7.4-phpqa
@@ -57,4 +56,8 @@ if ((DEPLOY)); then
     docker push wbgrs/php:7.4-node-fpm
     docker push wbgrs/php:7.2-node-apache
     docker push wbgrs/php:7.4-node-apache
+    docker push wbgrs/php:7.2-python
+    docker push wbgrs/php:7.4-python
+    docker push wbgrs/php:7.2-eb
+    docker push wbgrs/php:7.4-eb
 fi
