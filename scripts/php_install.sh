@@ -20,6 +20,8 @@ mkdir -p ~/.ssh && ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts && ssh-ke
 
 # Install composer
 curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#Switch to composer 2
+composer self-update --2
 
 # Install fast composer package downloader
 composer global require hirak/prestissimo
