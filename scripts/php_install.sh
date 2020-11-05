@@ -20,9 +20,7 @@ mkdir -p ~/.ssh && ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts && ssh-ke
 
 # Install composer
 wget -cO - https://getcomposer.org/composer-stable.phar > /usr/local/bin/composer
-
-# Install fast composer package downloader
-composer global require hirak/prestissimo
+chmod +x /usr/local/bin/composer
 
 # Install PCOV code coverage library
 pecl install pcov
