@@ -13,10 +13,6 @@ apt-get update
 apt-get install apt-utils -yqq
 apt-get install git zip unzip zlib1g-dev libzip-dev wget libxml2-dev libpq-dev openssh-client sudo libxslt1-dev libpng-dev libjpeg-dev libwebp-dev -yqq
 
-# refresh keys from the ubuntu keyserver
-apt-get install -yqq gnupg
-apt-key adv --refresh-keys --keyserver keyserver.ubuntu.com
-
 # Install autoconf and libtool to make sure javascript dependencies can compile
 apt install autoconf libtool dh-autoreconf -yqq
 
