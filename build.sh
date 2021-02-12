@@ -29,20 +29,20 @@ done
 shift $((OPTIND - 1))
 
 if ((!SKIP_BUILD)); then
-#    docker build . -f Dockerfile72 -t wbgrs/php:7.2
+    docker build . -f Dockerfile72 -t wbgrs/php:7.2
     docker build . -f Dockerfile74 -t wbgrs/php:7.4
-#    docker build . -f Dockerfile72-node -t wbgrs/php:7.2-node
-#    docker build . -f Dockerfile74-node -t wbgrs/php:7.4-node
-#    docker build . -f Dockerfile72-phpqa -t wbgrs/php:7.2-phpqa
-#    docker build . -f Dockerfile74-phpqa -t wbgrs/php:7.4-phpqa
-#    docker build . -f Dockerfile72-node-fpm -t wbgrs/php:7.2-node-fpm
-#    docker build . -f Dockerfile74-node-fpm -t wbgrs/php:7.4-node-fpm
-#    docker build . -f Dockerfile72-node-apache -t wbgrs/php:7.2-node-apache
-#    docker build . -f Dockerfile74-node-apache -t wbgrs/php:7.4-node-apache
-#    docker build . -f Dockerfile72-python -t wbgrs/php:7.2-python
-#    docker build . -f Dockerfile74-python -t wbgrs/php:7.4-python
-#    docker build . -f Dockerfile72-eb -t wbgrs/php:7.2-eb
-#    docker build . -f Dockerfile74-eb -t wbgrs/php:7.4-eb
+    docker build . -f Dockerfile72-node -t wbgrs/php:7.2-node
+    docker build . -f Dockerfile74-node -t wbgrs/php:7.4-node
+    docker build . -f Dockerfile72-phpqa -t wbgrs/php:7.2-phpqa
+    docker build . -f Dockerfile74-phpqa -t wbgrs/php:7.4-phpqa
+    docker build . -f Dockerfile72-node-fpm -t wbgrs/php:7.2-node-fpm
+    docker build . -f Dockerfile74-node-fpm -t wbgrs/php:7.4-node-fpm
+    docker build . -f Dockerfile72-node-apache -t wbgrs/php:7.2-node-apache
+    docker build . -f Dockerfile74-node-apache -t wbgrs/php:7.4-node-apache
+    docker build . -f Dockerfile72-python -t wbgrs/php:7.2-python
+    docker build . -f Dockerfile74-python -t wbgrs/php:7.4-python
+    docker build . -f Dockerfile72-eb -t wbgrs/php:7.2-eb
+    docker build . -f Dockerfile74-eb -t wbgrs/php:7.4-eb
     docker build . -f Dockerfile74-node14 -t wbgrs/php:7.4-node14
     docker build . -f Dockerfile74-node14-fpm -t wbgrs/php:7.4-node14-fpm
     docker build . -f Dockerfile74-node14-phpqa -t wbgrs/php:7.4-node14-phpqa
