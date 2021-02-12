@@ -43,6 +43,9 @@ if ((!SKIP_BUILD)); then
     docker build . -f Dockerfile74-python -t wbgrs/php:7.4-python
     docker build . -f Dockerfile72-eb -t wbgrs/php:7.2-eb
     docker build . -f Dockerfile74-eb -t wbgrs/php:7.4-eb
+    docker build . -f Dockerfile74-node14 -t wbgrs/php:7.4-node14
+    docker build . -f Dockerfile74-node14-fpm -t wbgrs/php:7.4-node14-fpm
+    docker build . -f Dockerfile74-node14-phpqa -t wbgrs/php:7.4-node14-phpqa
 fi
 
 if ((DEPLOY)); then
@@ -60,4 +63,7 @@ if ((DEPLOY)); then
     docker push wbgrs/php:7.4-python
     docker push wbgrs/php:7.2-eb
     docker push wbgrs/php:7.4-eb
+    docker push wbgrs/php:7.4-node14
+    docker push wbgrs/php:7.4-node14-fpm
+    docker push wbgrs/php:7.4-node14-phpqa
 fi
