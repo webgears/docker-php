@@ -1,0 +1,17 @@
+FROM wbgrs/php:7.4-node12
+
+RUN apt-get install jq libxml2-utils -yqq
+RUN apt-get clean
+RUN npm install -g diff2html-cli
+
+RUN curl https://gitlab.com/webgears-gmbh/phpqa/-/archive/master/phpqa-master.zip --output phpqa.zip
+RUN unzip phpqa.zip
+RUN mv phpqa-master /phpqa
+RUN rm phpqa.zip
+
+WORKDIR /phpqa
+RUN composer install
+RUN ln -sr ./scripts/phpunit-coverage vendor/bin/phpunit-coverage
+RUN ln -sr ./scripts/phpunit-result vendor/bin/phpunit-result
+RUN patch vendor/consolidation/robo/src/Task/Base/ParallelExec.php < error_output.patch
+CMD /phpqa/vendor/bin/phpqa
