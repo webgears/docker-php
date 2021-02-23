@@ -4,3 +4,6 @@ RUN /scripts/node14_install.sh
 
 # Install autoreconf to fix gulp-imagin issue
 RUN apt install dh-autoreconf -yqq
+
+# Install rsync
+RUN apt install rsync
