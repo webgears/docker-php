@@ -6,4 +6,4 @@ RUN /scripts/node14_install.sh
 RUN apt install dh-autoreconf -yqq
 
 # Install rsync
-RUN apt install rsync
+RUN apt install -yqq rsync
