@@ -5,3 +5,6 @@ ADD ./bin/slack /usr/local/bin
 RUN /scripts/php74_install.sh
 RUN apt-get install jq -yqq
 RUN apt-get clean
+
+# Install rsync
+RUN apt install -yqq rsync
